@@ -9,6 +9,7 @@ body {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: black;
 }
 html {
   scroll-behavior: smooth;
@@ -26,21 +27,49 @@ ul {
 }
 
 /* Small */
-@media (min-width:768px) {
-    .container {
-        width: 750px;
-    }
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 /* Medium */
-@media (min-width:992px) {
-    .container {
-        width: 970px;
-    }
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
 /* Large */
-@media (min-width:1200) {
-    .container {
-        width: 1170px;
-    }
+@media (min-width: 1200) {
+  .container {
+    width: 1170px;
+  }
 }
 /* End Global Rules */
+/* Start Header */
+header {
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container::before {
+  content: "";
+  height: 1px;
+  background-color: white;
+  width: calc(100% - 30px);
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+nav {
+  flex: 1;
+}
+/* End Header */
